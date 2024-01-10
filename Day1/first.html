@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List</title>
+    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<style>
+    .container{
+        width: 40%;
+        top: 50%;
+        left: 50%;
+        background: white;
+        border-radius: 10px;
+        min-width: 450px;
+        position: absolute;
+        min-height: 100px;
+        transform: translate(-50%,-50%);
+    }
+    #tasks{
+        border-radius: 10px;
+        width: 100%;
+        position: relative;
+        background-color: #ffffff;
+        padding: 30px 20px;
+        margin-top: 10px;
+    }
+    .task{
+        border-radius: 5px;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #939697;
+        cursor: pointer;
+        background-color: #c5e1e6;
+        height: 50px;
+        margin-bottom: 8px;
+        padding: 5px 10px;
+        display: flex;
+    }
+    .task span{
+        font-family: 'Poppins',sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .task button{
+        background-color: #6583e5;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        height: 100%;
+        width: 40px;
+        border-radius: 5px;
+    }
+    </style>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">To Do List</div>
+            <div class="card-body">
+                <div class="row">
+                    <div id="newtask" class="col-md-6">
+                        <input type="text" placeholder="Add Tasks" id="field_name" name="field_name" class="form-control" aria-describedby="label">
+                    </div>
+                    <div class="col-md-3" >
+                        <button id="push" type="submit"  class="btn btn-primary ">Add</button>
+                    </div>
+                    <div id="tasks"></div>
+                   
+                    <!-- <div class="col-md-12">
+                        <button type="button" id="copy" class="btn btn-primary clipboard" data-clipboard-target="#output">Copy</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>document.querySelector('#push').onclick = function(){
+    if(document.querySelector('#newtask input').value.length == 0){
+        alert("Kindly Enter Task Name!!!!")
+    }
+
+    else{
+        document.querySelector('#tasks').innerHTML += `
+            <div class="task">
+                <span id="taskname">
+                    ${document.querySelector('#newtask input').value}
+                </span>
+                <button class="delete">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+            </div>
+        `;
+
+        var current_tasks = document.querySelectorAll(".delete");
+        for(var i=0; i<current_tasks.length; i++){
+            current_tasks[i].onclick = function(){
+                this.parentNode.remove();
+            }
+        }
+    }
+}
+</script>
