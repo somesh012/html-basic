@@ -3,4 +3,4 @@
 
 ## To-do List
 
-![To-do List](images/screenshot1.png)
+![To-do List](images/screenshot.png)
