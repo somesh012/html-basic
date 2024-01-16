@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Up Day9</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .container{
+        background-color: #fff;
+        border-radius: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+        position: relative;
+        overflow: hidden;
+        width: 500px;
+        max-width: 100%;
+        min-height: 500px;
+    }
+    .container button{
+        background-color: orange;
+        color: #fff;
+        font-size: 12px;
+        padding: 10px 45px;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    
+    .container button:hover{
+        background-color: #00a1ff;
+    }
+    .container form{
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        height: 100%;
+    }
+    </style>
+    
+ <body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+             <form action="" autocomplete="on" >
+                <h1>Sign Up</h1>
+                <span>It's free and always will be</span><br>
+                    <div class="col-md-3">
+                        <input type="text" id="fname" name="fname" value=""placeholder='First Name' autofocus>
+                        <input type="text" id="lname" name="lname" value="" placeholder="Last Name"> 
+                    </div>
+                    <br>
+                    <div class="col-md-6">
+                        <input type="email" id="email" name="email" placeholder=" Your Email">
+                    </div>
+                    <br>
+                    <div class="col-md-6">
+                         <input type="email" id="email" name="email" placeholder="Re-enter Email">
+                    </div>
+                    <br>
+                    <div class="col-md-6">
+                        <input type="text" name="" id="" placeholder="Password">
+                    </div>
+                    <label for="birthday">Birthday:</label>
+                        <input type="date" id="birthday" name="birthday">
+                                <br>
+                    <div class="col-md-3">
+                         <input type="radio">Male
+                         <input type="radio">Female
+                         <input type="radio">Other
+                    </div>
+                    <button onclick="alert('WELCOME')">SUBMIT</button>
+                </form>
+          </div> 
+    </div>
+</body>
+</html>
+        

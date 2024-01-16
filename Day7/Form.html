@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms Day7</h2>
+<form action="/E:\Github\html-basic\Day3\index.html" autocomplete="on" >
+    <fieldset>
+        <legend>Personalia:</legend>
+         <label for="fname">First name:</label><br>
+  
+        <input type="text" id="fname" name="fname" value="" autofocus><br>
+  
+        <label for="lname">Last name:</label><br>
+  
+        <input type="text" id="lname" name="lname" value=""> 
+        <br>
+        <label for="gender">Gender :</label><br>
+          <!-- <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+           </select>
+        -->
+           <input list="browsers">
+           <datalist id="browsers">
+                <option value="Male">
+                <option value="Female">
+                <option value="Other">
+           </datalist>
+                <br>
+                <label for="birthday">DOB:</label><br>
+                    <input type="date" id="birthday" name="birthday">
+                    <br> 
+                    <label for="email">Enter your email:</label><br>
+                    <input type="email" id="email" name="email">
+                   <br>
+                   <label for="myfile">Upload Resume/CV:</label><br>
+                   <input type="file" id="myfile" name="myfile">
+
+                <p>Choose Any one launguage:</p>
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                  <label for="html">HTML</label>
+                  <input type="radio" id="css" name="fav_language" value="CSS">
+                  <label for="css">CSS</label>
+                  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                  <label for="javascript">JavaScript</label><br><br>
+                 
+        <input type="submit" value="Submit" onclick="alert('SUBMIT')">
+    </fieldset>
+</form> 
+</body>
+</html>
